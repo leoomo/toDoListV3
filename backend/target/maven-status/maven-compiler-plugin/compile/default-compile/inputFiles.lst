@@ -1,0 +1,12 @@
+/Users/zen/projects/toDoListV3/backend/src/main/java/com/todolist/backend/service/TodoService.java
+/Users/zen/projects/toDoListV3/backend/src/main/java/com/todolist/backend/config/CorsConfig.java
+/Users/zen/projects/toDoListV3/backend/src/main/java/com/todolist/backend/dto/TodoRequest.java
+/Users/zen/projects/toDoListV3/backend/src/main/java/com/todolist/backend/dto/TodoListResponse.java
+/Users/zen/projects/toDoListV3/backend/src/main/java/com/todolist/backend/TodoBackendApplication.java
+/Users/zen/projects/toDoListV3/backend/src/main/java/com/todolist/backend/controller/TodoController.java
+/Users/zen/projects/toDoListV3/backend/src/main/java/com/todolist/backend/dto/TodoResponse.java
+/Users/zen/projects/toDoListV3/backend/src/main/java/com/todolist/backend/exception/GlobalExceptionHandler.java
+/Users/zen/projects/toDoListV3/backend/src/main/java/com/todolist/backend/repository/TodoRepository.java
+/Users/zen/projects/toDoListV3/backend/src/main/java/com/todolist/backend/config/OpenApiConfig.java
+/Users/zen/projects/toDoListV3/backend/src/main/java/com/todolist/backend/controller/SystemController.java
+/Users/zen/projects/toDoListV3/backend/src/main/java/com/todolist/backend/model/Todo.java
