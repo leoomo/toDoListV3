@@ -42,6 +42,7 @@
 ### 🔧 技术特性
 - 🏗️ **前后端分离** - 灵活的架构设计
 - 🔒 **数据验证** - 完善的输入验证和错误处理
+- 🔐 **安全配置** - 环境变量管理敏感信息
 - 🌐 **CORS支持** - 跨域资源共享配置
 - 📚 **API文档** - 自动生成的Swagger文档
 - 🧪 **测试覆盖** - 完整的单元测试和集成测试
@@ -94,14 +95,21 @@ CREATE DATABASE IF NOT EXISTS todoapp CHARACTER SET utf8mb4 COLLATE utf8mb4_unic
 USE todoapp;
 ```
 
-### 3. 后端启动
+### 3. 环境变量配置
+
+```bash
+# 设置数据库密码环境变量
+export DB_PASSWORD=your_actual_password
+
+# Windows用户使用
+# set DB_PASSWORD=your_actual_password
+```
+
+### 4. 后端启动
 
 ```bash
 # 进入后端目录
 cd backend
-
-# 配置数据库连接（可选，默认配置已包含）
-# 编辑 src/main/resources/application.yml
 
 # 启动后端服务
 mvn spring-boot:run
@@ -109,7 +117,7 @@ mvn spring-boot:run
 
 后端服务将在 `http://localhost:8000` 启动
 
-### 4. 前端启动
+### 5. 前端启动
 
 ```bash
 # 进入前端目录
@@ -124,7 +132,7 @@ npm run dev
 
 前端应用将在 `http://localhost:3000` 启动
 
-### 5. 验证安装
+### 6. 验证安装
 
 - 🌐 **前端应用**: http://localhost:3000
 - 🔧 **后端API**: http://localhost:8000
@@ -207,6 +215,30 @@ interface TodoListResponse {
 ```
 
 📖 **完整API文档**: http://localhost:8000/docs
+
+## 🔐 安全配置
+
+### 环境变量管理
+
+本项目使用环境变量管理敏感信息，确保安全性：
+
+```bash
+# 必需的环境变量
+export DB_PASSWORD=your_actual_password
+
+# 可选的环境变量
+export SERVER_PORT=8000
+export SPRING_PROFILES_ACTIVE=dev
+```
+
+### 安全最佳实践
+
+- ✅ **密码脱敏** - 数据库密码通过环境变量管理
+- ✅ **配置分离** - 敏感信息与代码分离
+- ✅ **版本控制安全** - 敏感文件已添加到.gitignore
+- ✅ **生产环境安全** - 支持生产环境安全配置
+
+📖 **详细配置说明**: [环境变量配置指南](backend/env-config.md)
 
 ## 🧪 测试
 

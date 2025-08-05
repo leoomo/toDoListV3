@@ -8,7 +8,7 @@ spring:
   datasource:
     url: jdbc:mariadb://localhost:3306/todoapp
     username: root
-    password: Zh777888
+    password: ${DB_PASSWORD:your_password_here}
     driver-class-name: org.mariadb.jdbc.Driver
   
   jpa:
